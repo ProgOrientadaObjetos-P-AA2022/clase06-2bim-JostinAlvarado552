@@ -10,24 +10,30 @@ package paquete02;
  * @author reroes
  */
 public class Auto {
+
     private String placa;
     private double valorMatricula;
-    
-    public void establecerPlaca(String p){
+
+    public void establecerPlaca(String p) {
         placa = p;
     }
-    
-    public void establecerValorMatricula(double p){
+
+    public void establecerValorMatricula(double p) {
         valorMatricula = p;
     }
-    
-    public String obtenerPlaca(){
+
+    public String obtenerPlaca() {
         return placa;
     }
-    
-    public double obtenerValorMatricula(){
+
+    public double obtenerValorMatricula() {
         return valorMatricula;
     }
-    
-    
+
+    public String toString() {
+        String cadena = "";
+        cadena = String.format("Placa: %s\t Matricula: %.2f", obtenerPlaca(), obtenerValorMatricula());
+
+        return cadena;
+    }
 }
